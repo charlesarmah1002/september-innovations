@@ -1,0 +1,231 @@
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: secular-one;
+    src: url(fonts/Secular_One/SecularOne-Regular.ttf);
+}
+@font-face {
+    font-family: dancing-script;
+    src: url(fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: cairo;
+    src: url(fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf);
+}
+
+
+/* 
+ really have to start working on the mobile view and the various breakpoints
+ making sure that the design works for various devices and doesn't only work
+ well on the PC
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+    color: #f4f1f6;
+    font-size: 1.1rem;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(-135deg, #f4f1f6, #00072c),  url(../img/landing-page\ back4.jpg);
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    position: relative;
+}
+header::before {
+    content: '';
+    background: #f4f1f6;
+    width: 300px;
+    position: absolute;
+    bottom: 15px;
+    height: 3px;
+}
+.main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 100px;
+    top: 0;
+    width: 100%;
+    position: relative;
+}
+.logo-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: cairo;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.logo-container .name span {
+    font-family: dancing-script;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.menu li a {
+    margin-left: 5px;
+    padding: 8px 12px;
+    text-transform: capitalize;
+    transition: 0.4s;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.menu li a:hover, .active {
+    background: #9a9eb2;
+    color: #00072c;
+    font-weight: 600;
+}
+
+/* main */
+main {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+main .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+main .hero-section .content {
+    width: 60%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+main .hero-section .content p {
+    margin: 30px 0;
+}
+.hero-section .image-container {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 10px;
+}
+.hero-section .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.title {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.title span {
+    font-size: 2rem;
+    color: #f41f89;
+    font-family: cairo, sans-serif;
+}
+
+/* search bar */
+.search-bar {
+    width: 250px;
+    background: #9a9eb270;
+    backdrop-filter: blur(10px);
+    position: relative;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+.search-bar input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #f4f1f6;
+    padding: 5px;
+    transition: 0.5s;
+}
+.search-bar:hover, .search-bar input:focus {
+    background: #f4f1f660;
+}
+.search-bar input::placeholder {
+    opacity: 1;
+    color: #f4f1f6;
+}
+.search-bar .fa-magnifying-glass {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/* buttons */
+.btn {
+    padding: 10px 20px;
+    background: #f41f89;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 3px solid #f41f89;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.btn:hover {
+    background: transparent;
+    color: #f41f89;
+}
+
+/* footer */
+main section.footer {
+    height: 10vh;
+    background: #00073680;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main section.footer i {
+    margin: 0 10px;
+    font-size: 1.7rem;
+    color: #f4f1f680;
+    transition: 0.5s;
+}
+main section.footer i:hover {
+    color: #f4f1f6;
+}
